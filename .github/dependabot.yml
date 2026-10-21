@@ -1,0 +1,88 @@
+version: 2
+updates:
+  - package-ecosystem: docker
+    directories:
+    - /experiment/ksandbox/dev/images/protoc
+    - /hack/boilerplate
+    - /images/alpine
+    - /images/bazelbuild
+    - /images/bigquery
+    - /images/bootstrap
+    - /images/builder
+    - /images/gcloud-in-go
+    - /images/git
+    - /images/git-custom-k8s-auth
+    - /images/krte
+    - /images/kubekins-e2e
+    - /images/kubekins-e2e-v2
+    - /kettle
+    - /logexporter/cmd
+    - /pkg/benchmarkjunit
+    - /triage
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      routine-updates:
+        patterns:
+        - '*'
+        update-types:
+        - minor
+        - patch
+  - package-ecosystem: gomod
+    directories:
+    - /
+    - /experiment/ksandbox
+    - /hack/tools
+    - /hack/tools/golangci-lint
+    - /triage
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      routine-updates:
+        patterns:
+        - '*'
+        update-types:
+        - minor
+        - patch
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      routine-updates:
+        patterns:
+        - '*'
+        update-types:
+        - minor
+        - patch
+  - package-ecosystem: pip
+    directories:
+    - /
+    - /config/jobs/kubernetes/kops
+    - /gubernator
+    - /hack
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      routine-updates:
+        patterns:
+        - '*'
+        update-types:
+        - minor
+        - patch
+  - package-ecosystem: uv
+    directory: /kettle
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      routine-updates:
+        patterns:
+        - '*'
+        update-types:
+        - minor
+        - patch
