@@ -1,6 +1,6 @@
 webtest
 nosegae
-pylint==1.6.4
+pylint==4.0.9
 coverage
 lazy-object-proxy==1.6.0
 PyYAML==5.1.1
